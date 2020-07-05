@@ -1,0 +1,39 @@
+<template>
+    <lightning-card title="Search By Vendor">
+        <div class="slds-card">
+            <div class="slds-p-around_medium">
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col slds-size_5-of-12">
+                        <lightning-input name="input1" label="Name of the Vendor">
+                        </lightning-input><br />
+                        <lightning-button label="Go!" variant="brand" onclick={handleClick}>
+                        </lightning-button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <template for:each={contractList} for:item="contract">
+            <template for:each={contract.Contracts__r} for:item="con">
+                <div key={con.id}>
+                    <div class="table-wrapper">
+                        <table class="fl-table">
+                            <thead>
+                                <tr>
+                                    <th>contract Name</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="contract Name">
+                                        {con.Name}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </template>
+            
+        </template>
+    </lightning-card>
+</template>

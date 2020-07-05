@@ -1,0 +1,32 @@
+<template>
+    <lightning-card>
+        <template for:each={unitList} for:item="unit">
+            <div key={unit.id}>
+                <div class="table-wrapper">
+                    <table class="fl-table">
+                        <thead>
+                            <tr>
+                                <th>Unit Name</th>
+                                <th>Building Name</th>
+                                <th>Occupied</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Unit Name">
+                                    {unit.Name}
+                                </td>
+                                <td data-label="Building Name">
+                                    {unit.Building__r.Name}
+                                </td>
+                                <td data-label="Occupied">
+                                    {unit.occupied__c}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </template>
+    </lightning-card>
+</template>

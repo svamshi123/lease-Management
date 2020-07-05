@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Add Contract">
+        <div class="slds-card">
+            <div class="slds-p-around_medium">
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col slds-size_5-of-12">
+                        <lightning-input name="input1" label="Name of the Contract">
+                        </lightning-input>
+                        <lightning-combobox name="input2" label="Name Of the Building" options={buildingOptions}
+                            onchange={handleUnits}>
+                        </lightning-combobox>
+                        <lightning-combobox name="input3" label="Name Of the Unit" options={UnitOptions}>
+                        </lightning-combobox>
+                        <lightning-combobox name="input4" label="Name Of the Contact" options={contactoptions}>
+                        </lightning-combobox>
+                        <lightning-combobox name="input5" label="Status" options={options} value={value}>
+                        </lightning-combobox><br />
+                        <lightning-button label="Save" variant="brand" onclick={handleClick}>
+                        </lightning-button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+</template>

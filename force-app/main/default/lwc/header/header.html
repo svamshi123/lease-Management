@@ -1,0 +1,66 @@
+<template>
+    <div class="slds-page-header">
+        <div class="slds-page-header__row">
+            <div class="slds-page-header__col-title">
+                <div class="slds-media">
+                    <div class="slds-media__figure">
+                        <div class="container">
+                            Lease Management
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                {Name}
+            </div>
+        </div>
+    </div>
+    <div class="slds-page-header header">
+        <div class="slds-page-header__row">
+            <div class="slds-page-header__col-title">
+                <div class="slds-media">
+                    <div class="slds-media__figure">
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-12">
+                                <a data-id="homeblock" class="btn active" href="javaScript:void(0);"
+                                    onclick={navigetetHome}>Home</a>
+                                <a data-id="buildblock" class="btn" href="javaScript:void(0);"
+                                    onclick={navigatetoBuilding}>Building</a>
+                                <a data-id="unitblock" class="btn" href="javaScript:void(0);"
+                                    onclick={navigatetoUit}>Unit</a>
+                                <a data-id="contractblock" class="btn" href="javaScript:void(0);"
+                                    onclick={navigateContract}>Contract</a>
+                                <a data-id="SBBblock" class="btn" href="javaScript:void(0);"
+                                    onclick={navigateSearchByBuilding}>SearchByBuilding</a>
+                                <a data-id="SBVblock" class="btn" href="javaScript:void(0);"
+                                    onclick={navigateSearchByVendor}>SearchByVendor</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="slds-m-left_small slds-m-right_small slds-m-bottom_small">
+        <template if:true={Hometrach}>
+            <c-home></c-home>
+        </template>
+        <template if:true={Buildingtrack}>
+            <c-building></c-building>
+        </template>
+        <template if:true={UnitTrack}>
+            <c-unit></c-unit>
+        </template>
+        <template if:true={Contracttrack}>
+            <c-contract></c-contract>
+        </template>
+        <template if:true={SearchByBuilding}>
+            <c-serach-by-building></c-serach-by-building>
+        </template>
+        <template if:true={SearchByvendor}>
+            <c-search-by-vendor></c-search-by-vendor>
+        </template>
+    </div>
+</template>

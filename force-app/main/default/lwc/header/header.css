@@ -1,0 +1,45 @@
+.slds-page-header {
+  background-color: rgb(49, 43, 43);
+}
+.slds-media__figure {
+  color: white;
+  font-size: 22px;
+  font-size: 1.375rem;
+}
+.right {
+  color: white;
+  float: right;
+  margin: 0.7em 0 0;
+  font-size: 22px;
+  font-size: 1.375rem;
+}
+/* .header {
+  background-color: rgb(37, 20, 20);
+} */
+.header {
+  overflow: hidden;
+  background-color: rgb(37, 20, 20);
+}
+.header a {
+  /* float: left; */
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 46px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.header a:hover {
+  background-color: rgb(218, 102, 60);
+  color: rgb(37, 20, 20);
+}
+.class1{
+  background-color: rgb(218, 102, 60);
+  color: white;
+}
+.class2{
+  background-color: rgb(37, 20, 20);
+}
+/*.topnav a.active {
+  background-color: rgb(218, 102, 60);
+  color: white;
+}*/
